@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>run script</title>
+	<link rel="stylesheet" href="">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+</head>
+<body>
+
+
+	<div class="display-count"></div>
+	<script type="text/javascript">
+	//$(document).ready(function($) {
+		    console.log("doc ready");	
+		    var current_number = 0; 
+		    var number_of_files = 0;
+		    var d = new Date();
+		    d = d.getTime() + "";
+
+    //live indigo var publicationFeed = ["global-governance","general-election","cpjh","mathematical-physical-sciences","social-media","q-step","global","haemostasis","joel-indigo","teaching-learning","childcareinbritain","chemeng","indigo-demo","wams","ucl-press","isd","strategy","impact","spark-festival","sci-eng-open-day","indigo"];
+
+//var publicationFeed = ['aaron-sandbox', 'accommodation', 'archaeology', 'art-history', 'biosciences', 'building-great-websites', 'cam', 'cancer', 'cancer-BAK', 'childcareinbritain', 'citizen-science', 'clie', 'constitution-unit', 'cps', 'da-forum', 'dh', 'economics', 'european-institute', 'forensic-sciences', 'general-election', 'geospatial-analytics', 'ges', 'greenucl', 'haemostasis-research-unit', 'human-evolution', 'ibn', 'iehc', 'imess', 'indigo', 'indigo-demo', 'informationsecurity', 'institute-for-materials-discovery', 'institute-of-advanced-studies', 'integrity', 'international-literacy', 'ioe-demo', 'isd', 'joel-sandbox', 'mathematical-physical-sciences', 'matts-sandbox', 'media-system-test', 'micropalaeontology', 'migrated', 'onedayinthecity', 'philosophy', 'radiochemistry', 'research-it-services', 'research-services', 'rizwan', 'rlweston-institute', 'robotics', 'sapc-madingley-hall-2016', 'sonja-sandbox', 'spark-festival', 'spintronics', 'ssees', 'student-mediator', 'student-psychological-services', 'ucl-branding-demo', 'ucl-east', 'ultrasonics', 'vision-imaging-science', 'visual-identity', 'your-application']
+
+var publicationFeed = ["new-site-template", "enterprise", "Version1", "antropy", "csml", "bartlett", "ioo", "wams-testing", "dutch", "joel-sandbox", "awc", "ogm", "copy_of_gacd", "prospective-students", "dom-centres", "rid-rti", "prostate", "estates", "ssees", "cromis-2", "cica-please-archive", "library", "mrg", "instituteforwomenshealth", "energy-tech", "eedm", "scs", "new-student-centre", "fmo", "european-studies", "building-great-websites", "ralph-sandbox", "laws", "archive2", "cmic", "ucl-infection-dna-bank", "consultants-old-dont-use", "bioaid", "www.euroewing.eu", "designer-algae", "copy_of_laws", "pals", "epidemiology", "volterra", "science-medicine-society-network", "3dpetriemuseum", "cst", "repurposing-drugs", "advances", "archaeology", "www.i-mars.eu", "ucl-branding-demo", "copy_of_www.i-mars.eu", "residences", "engineering-fluid-mechanics", "research", "domains-old", "ucl-enterprise-plugin-page", "copy_of_advances", "rizwan-sandbox", "aaron-sandbox", "ben-iris-test", "igh", "careers", "earth-sciences", "fluid-mechanics-group", "esrc-doctoral-training-centre", "www.e-pilepsy.eu", "railway-research", "energy", "lifelearning", "brodsky-lab", "graduate", "indigo-test", "www.hyve.org.uk", "old-new-students", "new-students", "computer-assisted-interventions", "medicalschool", "www.pangea-hiv.ac.uk", "human-evolution", "human-population-genetics", "build-websites", "practice-sites", "immunity-transplantation", "cmmp", "wams", "copy_of_joel-sandbox", "iph", "health-and-humanities", "european-institute", "da-induction", "anatomy-lab", "www.uhmlg.ac.uk", "www.ukcomes.org", "indigo-templates-demo", "spintronics", "ictm", "physiotherapy", "epicentre", "computational-biology-group", "early-medieval-atlas", "equianocentre", "secret", "ucfagro", "surgery", "bp-recall", "digital-business-labs", "forensic-sciences", "impact", "renamed_equianocentre", "bsc-population-health", "3dimpact", "resource-efficiency-environment", "circular-economy-lab", "www.ecmed-itn.eu", "cdcn", "centre-for-engineering-education", "copy2_of_teaching-learning", "advanced-light-microscopy", "about-ucl", "www.igp.ucl.ac.uk", "electrochemical-innovation-lab", "pharmacy", "roman-billingsgate", "heritage-science-impact", "gacd-BAK-08-05-15", "gacd", "confocal-imaging_migrated_11_05_2015", "migrated_2015-05-11_global-governance", "migrated_12_5_2015_dcd-brain-imaging", "energy-space-time", "resocialising-europe", "healthy-habits", "fisica-final-workshop", "migrated_20150528_www.euro-healthy.eu", "manufacturing-functional-materials", "migrated_03062015_ucl-east", "indigo", "test-joel", "pace", "inner-selfie", "www.sincere.eu", "economics", "philosophy", "www.eued.ac.uk", "indigo-demo", "migrated_art-history", "migrated_cam", "migrated_childcareinbritain", "migrated_general-election", "migrated_ges", "migrated_haemostasis-research-unit", "migrated_international-literacy", "migrated_mathematical-physical-sciences", "migrated_media-system-test", "migrated_q-step", "migrated_rlweston-institute", "migrated_sapc-madingley-hall-2016", "migrated_spark-festival", "migrated_vision-imaging-science", "migrated_visual-identity", "migrated_your-application", "migrated_isd", "www.restless.org.uk", "code-enigma", "code-enigma2", "ich"];
+
+
+
+
+	 var cslist = "indigo-boxout";
+
+//indigo-ucl-prospectus-undergraduate,indigo-ucl-prospectus-taught-degrees,default-ucl-prospectus-undergraduate,default-ucl-prospectus-taught-degrees
+		    var last_number = publicationFeed.length;
+		    console.log(last_number);
+
+// IF YOUR SCRIPT ALWAYS TRIGGERS THE AJAX FAIL FUNCTION, USE THIS TO RUN THE ITERATOR
+/*            $(document).ajaxComplete(function() {
+                if (current_number < last_number)
+                    call_url(current_number);
+            }); 
+*/
+
+		    function call_url(data_integer) {
+		        console.log("starting at " + data_integer);	
+		   		$.ajax({
+                    url: "http://wwwcm-zope-f.ucl.ac.uk:8135/silva/codesource_findall",
+		   			type: "POST",
+		   			dataType: "script",
+		   			data: {publication: publicationFeed[data_integer],datestring:d,codesource:cslist},
+		   		})
+		   		.done(function(data) {
+		   			console.log("success");
+		   		})
+		   		.fail(function(data) {
+		   			console.log("error");
+		   		})
+		   		.always(function(data) {
+		   		    current_number++;
+		   		    if (current_number < last_number)
+		   		        call_url(current_number);
+		   			console.log("completed " + current_number);
+		   		});
+		   		
+		    }
+		    
+	//call_url(0);
+	//});
+
+	
+	</script>
+
+<form action="" method="POST">
+    <input type="button" id="startScript" name="startScript" value="start script" onclick="javascript:call_url(0)">
+</form>
+<div class="status"></div>
+
+
+</body>
+</html>
+

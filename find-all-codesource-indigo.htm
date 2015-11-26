@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>run script</title>
+	<link rel="stylesheet" href="">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+</head>
+<body>
+
+
+	<div class="display-count"></div>
+	<script type="text/javascript">
+	//$(document).ready(function($) {
+		    console.log("doc ready");	
+		    var current_number = 0; 
+		    var number_of_files = 0;
+		    var d = new Date();
+		    d = d.getTime() + "";
+
+    //live indigo var publicationFeed = ["global-governance","general-election","cpjh","mathematical-physical-sciences","social-media","q-step","global","haemostasis","joel-indigo","teaching-learning","childcareinbritain","chemeng","indigo-demo","wams","ucl-press","isd","strategy","impact","spark-festival","sci-eng-open-day","indigo"];
+
+//var publicationFeed = ['aaron-sandbox', 'accommodation', 'archaeology', 'art-history', 'biosciences', 'building-great-websites', 'cam', 'cancer', 'cancer-BAK', 'childcareinbritain', 'citizen-science', 'clie', 'constitution-unit', 'cps', 'da-forum', 'dh', 'economics', 'european-institute', 'forensic-sciences', 'general-election', 'geospatial-analytics', 'ges', 'greenucl', 'haemostasis-research-unit', 'human-evolution', 'ibn', 'iehc', 'imess', 'indigo', 'indigo-demo', 'informationsecurity', 'institute-for-materials-discovery', 'institute-of-advanced-studies', 'integrity', 'international-literacy', 'ioe-demo', 'isd', 'joel-sandbox', 'mathematical-physical-sciences', 'matts-sandbox', 'media-system-test', 'micropalaeontology', 'migrated', 'onedayinthecity', 'philosophy', 'radiochemistry', 'research-it-services', 'research-services', 'rizwan', 'rlweston-institute', 'robotics', 'sapc-madingley-hall-2016', 'sonja-sandbox', 'spark-festival', 'spintronics', 'ssees', 'student-mediator', 'student-psychological-services', 'ucl-branding-demo', 'ucl-east', 'ultrasonics', 'vision-imaging-science', 'visual-identity', 'your-application']
+
+var publicationFeed = ["human-evolution", "student-psychological-services", "matts-sandbox", "joel-sandbox", "indigo-demo", "institute-of-advanced-studies", "european-institute", "building-great-websites", "ucl-branding-demo", "iehc", "cam", "childcareinbritain", "ges", "haemostasis-research-unit", "international-literacy", "mathematical-physical-sciences", "media-system-test", "rlweston-institute", "sapc-madingley-hall-2016", "spark-festival", "vision-imaging-science", "visual-identity", "your-application", "accommodation", "isd", "geospatial-analytics", "biosciences", "informationsecurity", "cps", "dh", "aaron-sandbox", "philosophy", "archaeology", "research-it-services", "institute-for-materials-discovery", "ibn", "indigo", "cancer-BAK", "micropalaeontology", "cancer", "constitution-unit", "rizwan", "greenucl", "ioe-demo", "migrated", "robotics", "imess", "economics", "citizen-science", "ssees", "onedayinthecity", "ultrasonics", "student-mediator", "spintronics", "research-services", "sonja-sandbox", "da-forum", "mcpcru", "caa", "oral-health-in-sport-network", "merv", "mud", "www.lifestudy.ac.uk", "epidemiology", "nsips", "public-policy", "to-delete-clie", "clie", "healthy-habits"];
+
+
+
+
+	 var cslist = "indigo-boxout";
+
+//indigo-ucl-prospectus-undergraduate,indigo-ucl-prospectus-taught-degrees,default-ucl-prospectus-undergraduate,default-ucl-prospectus-taught-degrees
+		    var last_number = publicationFeed.length;
+		    console.log(last_number);
+
+// IF YOUR SCRIPT ALWAYS TRIGGERS THE AJAX FAIL FUNCTION, USE THIS TO RUN THE ITERATOR
+/*            $(document).ajaxComplete(function() {
+                if (current_number < last_number)
+                    call_url(current_number);
+            }); 
+*/
+
+		    function call_url(data_integer) {
+		        console.log("starting at " + data_integer);	
+		   		$.ajax({
+                    url: "http://wwwcm-zope-f.ucl.ac.uk:8121/silva/codesource_findall",
+		   			type: "POST",
+		   			dataType: "script",
+		   			data: {publication: publicationFeed[data_integer],datestring:d,codesource:cslist},
+		   		})
+		   		.done(function(data) {
+		   			console.log("success");
+		   		})
+		   		.fail(function(data) {
+		   			console.log("error");
+		   		})
+		   		.always(function(data) {
+		   		    current_number++;
+		   		    if (current_number < last_number)
+		   		        call_url(current_number);
+		   			console.log("completed " + current_number);
+		   		});
+		   		
+		    }
+		    
+	//call_url(0);
+	//});
+
+	
+	</script>
+
+<form action="" method="POST">
+    <input type="button" id="startScript" name="startScript" value="start script" onclick="javascript:call_url(0)">
+</form>
+<div class="status"></div>
+
+
+</body>
+</html>
+
