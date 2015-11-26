@@ -14,8 +14,8 @@
 	<div class="display-count"></div>
 	<script type="text/javascript">
 	//$(document).ready(function($) {
-		    console.log("doc ready");	
-		    var current_number = 0; 
+		    console.log("doc ready");
+		    var current_number = 0;
 		    var number_of_files = 0;
 		    var d = new Date();
 		    d = d.getTime() + "";
@@ -24,12 +24,12 @@
 
 //var publicationFeed = ['aaron-sandbox', 'accommodation', 'archaeology', 'art-history', 'biosciences', 'building-great-websites', 'cam', 'cancer', 'cancer-BAK', 'childcareinbritain', 'citizen-science', 'clie', 'constitution-unit', 'cps', 'da-forum', 'dh', 'economics', 'european-institute', 'forensic-sciences', 'general-election', 'geospatial-analytics', 'ges', 'greenucl', 'haemostasis-research-unit', 'human-evolution', 'ibn', 'iehc', 'imess', 'indigo', 'indigo-demo', 'informationsecurity', 'institute-for-materials-discovery', 'institute-of-advanced-studies', 'integrity', 'international-literacy', 'ioe-demo', 'isd', 'joel-sandbox', 'mathematical-physical-sciences', 'matts-sandbox', 'media-system-test', 'micropalaeontology', 'migrated', 'onedayinthecity', 'philosophy', 'radiochemistry', 'research-it-services', 'research-services', 'rizwan', 'rlweston-institute', 'robotics', 'sapc-madingley-hall-2016', 'sonja-sandbox', 'spark-festival', 'spintronics', 'ssees', 'student-mediator', 'student-psychological-services', 'ucl-branding-demo', 'ucl-east', 'ultrasonics', 'vision-imaging-science', 'visual-identity', 'your-application']
 
-var publicationFeed = ["human-evolution", "student-psychological-services", "matts-sandbox", "joel-sandbox", "indigo-demo", "institute-of-advanced-studies", "european-institute", "building-great-websites", "ucl-branding-demo", "iehc", "cam", "childcareinbritain", "ges", "haemostasis-research-unit", "international-literacy", "mathematical-physical-sciences", "media-system-test", "rlweston-institute", "sapc-madingley-hall-2016", "spark-festival", "vision-imaging-science", "visual-identity", "your-application", "accommodation", "isd", "geospatial-analytics", "biosciences", "informationsecurity", "cps", "dh", "aaron-sandbox", "philosophy", "archaeology", "research-it-services", "institute-for-materials-discovery", "ibn", "indigo", "cancer-BAK", "micropalaeontology", "cancer", "constitution-unit", "rizwan", "greenucl", "ioe-demo", "migrated", "robotics", "imess", "economics", "citizen-science", "ssees", "onedayinthecity", "ultrasonics", "student-mediator", "spintronics", "research-services", "sonja-sandbox", "da-forum", "mcpcru", "caa", "oral-health-in-sport-network", "merv", "mud", "www.lifestudy.ac.uk", "epidemiology", "nsips", "public-policy", "to-delete-clie", "clie", "healthy-habits"];
+var publicationFeed = ['2014-site', 'CELTA', 'CourseUnits', 'DELTA', 'GradSupportFeesFINAL', 'SSCs', 'StrategicPlan', 'SummerIntensiveMFL', 'TEAP', 'academic-reading', 'apply-graduate-study', 'art-history', 'big_easter_switch_off_results', 'black-grey', 'bright-blue', 'bright-blue-bright-green', 'bright-blue-bright-red', 'bright-green', 'building-great-websites', 'cam', 'cancer', 'centenary', 'centre-for-oral-health-and-performance', 'changemakers', 'chemeng', 'chemistry-history-book', 'childcareinbritain', 'clie', 'constitution-unit', 'contact-us', 'copy_of_academic-manual-sandbox', 'cpd4he', 'crabtree', 'da-forum', 'dark-blue-yellow', 'dark-brown', 'dark-red', 'deep-reading', 'default', 'dev', 'dh', 'diploma', 'english-for-academic-purposes', 'epilab', 'es', 'evening-courses', 'eveningcourses', 'events-test', 'eye-on-the-sky', 'facebook-house-rules', 'forensic-sciences', 'general-election', 'geospatial-analytics', 'global', 'global-governance', 'grace', 'graduate-preparation-courses', 'greenucl', 'greenucl-agenda-publication', 'haemostasis', 'health-humanities', 'healthy-habits', 'ibn', 'icls', 'iehc', 'imess', 'impact', 'indigo', 'indigo-demo', 'indigo-demo-to-delete', 'informationsecurity', 'institute-for-materials-discovery', 'institute-of-advanced-studies', 'integrity', 'international-literacy', 'intranet', 'intranet', 'ipas', 'ippr', 'isd', 'joel-indigo', 'language-trails', 'library-new', 'light-blue-bright-pink', 'light-green-light-purple', 'light-red-orange', 'material-studies-lab', 'mathematical-physical-sciences', 'mcpcru', 'mid-red', 'msc-population-health', 'news', 'nsips', 'old', 'old-site-archive', 'online_dutch', 'orange', 'origins', 'part-time-english-courses', 'phd', 'pink', 'pre-masters', 'pre-masters-certificate-in-architecture', 'pre-sessional', 'preparatory-certificates', 'preparatory-certificates-new', 'psychoanalysis', 'purple', 'q-step', 'railway-research', 'research-it-services', 'rics_images', 'sapc-madingley-hall-2016', 'sci-eng-open-day', 'sky-blue', 'social-media', 'social-values-seminar', 'space-history', 'spark-festival', 'spintronics', 'ssees', 'staff', 'staff-intranet', 'stone', 'strategy', 'sub-brand-logo', 'sub-brand-logo', 'summer-spring-english-courses', 'teachertraining', 'teaching-learning', 'test', 'test-publication', 'theory-msc', 'ucl-east', 'ucl-press', 'ucl-scientist', 'wams', 'what-europe-means-to-me', 'why-we-post', 'www.learn-rdm.eu', 'www.ukcatalysishub.co.uk', 'yellow'];
 
 
 
 
-	 var cslist = "indigo-boxout";
+var cslist = "indigo-social-media-buttons";
 
 //indigo-ucl-prospectus-undergraduate,indigo-ucl-prospectus-taught-degrees,default-ucl-prospectus-undergraduate,default-ucl-prospectus-taught-degrees
 		    var last_number = publicationFeed.length;
@@ -39,16 +39,17 @@ var publicationFeed = ["human-evolution", "student-psychological-services", "mat
 /*            $(document).ajaxComplete(function() {
                 if (current_number < last_number)
                     call_url(current_number);
-            }); 
+            });
 */
 
 		    function call_url(data_integer) {
-		        console.log("starting at " + data_integer);	
+		        console.log("starting at " + data_integer);
 		   		$.ajax({
-                    url: "http://wwwcm-zope-f.ucl.ac.uk:8121/silva/codesource_findall",
+                    url: "http://wwwcm-zope-f.ucl.ac.uk:8122/silva/codesource_find",
 		   			type: "POST",
 		   			dataType: "script",
-		   			data: {publication: publicationFeed[data_integer],datestring:d,codesource:cslist},
+		   			//data: {publication: publicationFeed[data_integer],datestring:d,codesource:cslist},
+		   			data: {publication: publicationFeed[data_integer],datestring:'1234',codesource:cslist},
 		   		})
 		   		.done(function(data) {
 		   			console.log("success");
@@ -62,13 +63,13 @@ var publicationFeed = ["human-evolution", "student-psychological-services", "mat
 		   		        call_url(current_number);
 		   			console.log("completed " + current_number);
 		   		});
-		   		
+
 		    }
-		    
+
 	//call_url(0);
 	//});
 
-	
+
 	</script>
 
 <form action="" method="POST">
